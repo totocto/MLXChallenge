@@ -1,5 +1,12 @@
 # MLXChallenge
 
+In MLX, we are data lovers and algorithm trainers, but we do not have any tool to be aware of a training energy 
+consumption. Code Carbon brings a new method to evaluate your consumption per training, and save it across time.
+This small exercise will help you to use this simple tool.
+
+A second part is dedicated to front lovers (#AUMA), to evaluate website consumption thanks to GreenIT tool.
+
+
 ### 1 - Which consommation for a training ?
 
 The aim of this part, is to measure environment impact during algorithm training
@@ -8,7 +15,10 @@ The aim of this part, is to measure environment impact during algorithm training
 
 - We will work on mnist dataset that you can load with
 
-`(x_train, y_train), (x_test, y_test) = mnist.load_data()`
+```
+mnist = tf.keras.datasets.mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+```
 
 - Choose an algithm to predict correctly digits
 
@@ -34,7 +44,7 @@ model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
 
 - To visualize it with the codecarbon interface, you can use command: `carbonboard --filepath=emissions.csv --port=3000
 
-#### 2- Is this front is eco-friendly or greenwashing?
+### 2- Is this front is eco-friendly or greenwashing?
 
 - Create a new profile into your chrome
 
